@@ -18,7 +18,7 @@ const Sidebar = () => {
     { path: "/", name: "Home", icon: <FaHome /> },
     { path: "/myissues", name: "My Issues", icon: <FaClipboardList /> },
     { path: "/history", name: "History", icon: <FaHistory /> },
-    // { path: "/settings", name: "Settings", icon: <FaCog /> },
+    { path: "/settings", name: "Settings", icon: <FaCog /> },
         ];
 
 
