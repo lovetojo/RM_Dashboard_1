@@ -16,7 +16,7 @@
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .ecobank-logo {
@@ -72,12 +72,483 @@
   font-size: 18px;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 768px) {
+/* Issues Page Styles */
+.issues-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f9fafb;
+}
+
+.issues-header {
+  background-color: #ffffff;
+}
+
+.issues-main {
+  flex: 1;
+  padding: 40px 24px 24px 24px;
+  background-color: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.export-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #1f5d9f;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  align-self: flex-start;
+}
+
+.export-button:hover {
+  background-color: #1a4f87;
+}
+
+.export-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.issues-table-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.table-wrapper {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  flex: 1;
+}
+
+.issues-table {
+  width: 100%;
+  min-width: 800px;
+  border-collapse: collapse;
+}
+
+.table-header {
+  background-color: #f9fafb;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.table-header th {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 800;
+  color: #00567b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+  background-color: #f9fafb;
+}
+
+.table-body {
+  background-color: #ffffff;
+}
+
+.table-row {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 0.15s ease;
+}
+
+.table-row:hover {
+  background-color: #f9fafb;
+}
+
+.table-cell {
+  padding: 16px;
+  font-size: 14px;
+  color: #111827;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.request-time-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.request-date {
+  font-size: 14px;
+  color: #111827;
+}
+
+.request-time {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status-pending {
+  background-color: #f1f10da1;
+  color: #92400e;
+}
+
+.status-resolved {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-in-progress {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.empty-state {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  padding: 32px;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-icon {
+  width: 48px;
+  height: 48px;
+  color: #9ca3af;
+  margin: 0 auto 16px;
+}
+
+.empty-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.empty-description {
+  color: #6b7280;
+}
+
+/* History Page */
+.history-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f9fafb;
+}
+
+.history-header {
+  background-color: #ffffff;
+}
+
+.history-main {
+  flex: 1;
+  padding: 40px 24px 24px 24px;
+  background-color: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.history-page-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.history-page-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.history-export-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #1f5d9f;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  align-self: flex-start;
+}
+
+.history-export-button:hover {
+  background-color: #1a4f87;
+}
+
+.history-export-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.history-table-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.history-table-wrapper {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  flex: 1;
+}
+
+.history-table {
+  width: 100%;
+  min-width: 800px;
+  border-collapse: collapse;
+}
+
+.history-table-header {
+  background-color: #f9fafb;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.history-table-header th {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 800;
+  color: #00567b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+  background-color: #f9fafb;
+}
+
+.history-table-body {
+  background-color: #ffffff;
+}
+
+.history-table-row {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 0.15s ease;
+}
+
+.history-table-row:hover {
+  background-color: #f9fafb;
+}
+
+.history-table-cell {
+  padding: 16px;
+  font-size: 14px;
+  color: #111827;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.history-request-time-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.history-request-date {
+  font-size: 14px;
+  color: #111827;
+}
+
+.history-request-time {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.history-status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.history-status-done {
+  background-color: #b1d0ac;
+  color: #065f46;
+}
+
+.history-status-resolved {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.history-status-in-progress {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.history-empty-state {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  padding: 32px;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.history-empty-icon {
+  width: 48px;
+  height: 48px;
+  color: #9ca3af;
+  margin: 0 auto 16px;
+}
+
+.history-empty-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.history-empty-description {
+  color: #6b7280;
+}
+
+/* Mobile responsiveness - Extra Small (320px - 480px) */
+@media (max-width: 480px) {
+  .home-main {
+    padding: 15px;
+  }
+
   .buttons-container {
     grid-template-columns: 1fr;
     gap: 15px;
-    max-width: 300px;
+    max-width: 280px;
+  }
+
+  .action-button {
+    padding: 16px 18px;
+    font-size: 13px;
+  }
+
+  .ecobank-logo {
+    height: 45px;
+  }
+
+  .issues-main,
+  .history-main {
+    padding: 24px 12px 12px 12px;
+  }
+
+  .page-header,
+  .history-page-header {
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .page-title,
+  .history-page-title {
+    font-size: 18px;
+  }
+
+  .export-button,
+  .history-export-button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .export-icon,
+  .history-export-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .issues-table,
+  .history-table {
+    min-width: 600px;
+  }
+
+  .table-header th,
+  .history-table-header th {
+    padding: 8px 6px;
+    font-size: 10px;
+    font-weight: 800;
+  }
+
+  .table-cell,
+  .history-table-cell {
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+
+  .request-date,
+  .history-request-date {
+    font-size: 12px;
+  }
+
+  .request-time,
+  .history-request-time {
+    font-size: 10px;
+  }
+
+  .status-badge,
+  .history-status-badge {
+    padding: 2px 8px;
+    font-size: 10px;
+    font-weight: 700;
+  }
+}
+
+/* Mobile responsiveness - Small (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .buttons-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    max-width: 350px;
   }
 
   .action-button {
@@ -88,19 +559,204 @@
   .ecobank-logo {
     height: 50px;
   }
+
+  .issues-main,
+  .history-main {
+    padding: 28px 16px 16px 16px;
+  }
+
+  .page-header,
+  .history-page-header {
+    gap: 18px;
+    margin-bottom: 28px;
+  }
+
+  .page-title,
+  .history-page-title {
+    font-size: 20px;
+  }
+
+  .export-button,
+  .history-export-button {
+    padding: 7px 14px;
+    font-size: 13px;
+  }
+
+  .export-icon,
+  .history-export-icon {
+    width: 15px;
+    height: 15px;
+  }
+
+  .issues-table,
+  .history-table {
+    min-width: 700px;
+  }
+
+  .table-header th,
+  .history-table-header th {
+    padding: 10px 8px;
+    font-size: 11px;
+    font-weight: 800;
+  }
+
+  .table-cell,
+  .history-table-cell {
+    padding: 12px 8px;
+    font-size: 13px;
+  }
+
+  .request-date,
+  .history-request-date {
+    font-size: 13px;
+  }
+
+  .request-time,
+  .history-request-time {
+    font-size: 11px;
+  }
+
+  .status-badge,
+  .history-status-badge {
+    padding: 3px 10px;
+    font-size: 11px;
+    font-weight: 700;
+  }
 }
 
-@media (max-width: 480px) {
-  .home-main {
-    padding: 15px;
-  }
-
+/* Tablet responsiveness (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
   .buttons-container {
-    max-width: 250px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    max-width: 450px;
   }
 
-  .action-button {
-    padding: 16px 18px;
+  .issues-main,
+  .history-main {
+    padding: 32px 20px 20px 20px;
+  }
+
+  .page-header,
+  .history-page-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .page-title,
+  .history-page-title {
+    font-size: 22px;
+  }
+
+  .issues-table,
+  .history-table {
+    min-width: 750px;
+  }
+
+  .table-header th,
+  .history-table-header th {
+    padding: 11px 12px;
+    font-weight: 800;
+  }
+
+  .table-cell,
+  .history-table-cell {
+    padding: 14px 12px;
+  }
+
+  .status-badge,
+  .history-status-badge {
+    font-weight: 700;
+  }
+}
+
+/* Desktop responsiveness (1025px and up) */
+@media (min-width: 1025px) {
+  .page-header,
+  .history-page-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .page-title,
+  .history-page-title {
+    margin-bottom: 0;
+  }
+
+  .export-button,
+  .history-export-button {
+    align-self: auto;
+  }
+
+  .issues-table,
+  .history-table {
+    min-width: 100%;
+  }
+
+  .table-header th,
+  .history-table-header th {
+    padding: 12px 24px;
+    font-weight: 800;
+  }
+
+  .table-cell,
+  .history-table-cell {
+    padding: 16px 24px;
+  }
+
+  .status-badge,
+  .history-status-badge {
+    font-weight: 700;
+  }
+}
+
+/* Large Desktop (1440px and up) */
+@media (min-width: 1440px) {
+  .header-content {
+    max-width: 1400px;
+  }
+
+  .issues-main,
+  .history-main {
+    padding: 40px 32px 24px 32px;
+  }
+
+  .page-title,
+  .history-page-title {
+    font-size: 26px;
+  }
+
+  .table-header th,
+  .history-table-header th {
+    padding: 14px 28px;
     font-size: 13px;
+    font-weight: 800;
+  }
+
+  .table-cell,
+  .history-table-cell {
+    padding: 18px 28px;
+    font-size: 15px;
+  }
+
+  .status-badge,
+  .history-status-badge {
+    font-weight: 700;
+  }
+}
+
+/* Ultra-wide screens (1920px and up) */
+@media (min-width: 1920px) {
+  .header-content {
+    max-width: 1600px;
+  }
+
+  .issues-main,
+  .history-main {
+    padding: 48px 40px 32px 40px;
   }
 }

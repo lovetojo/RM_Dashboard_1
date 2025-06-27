@@ -1,16 +1,8 @@
-"use client"
-
-import { useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 import EcobankLogo from "../assets/Frame.svg"
 import "./Home.css"
 
 const Home = () => {
-  const navigate = useNavigate()
-
-  const handleButtonClick = () => {
-    navigate("/form")
-  }
-
   return (
     <div className="home-container">
       <header className="home-header">
@@ -22,14 +14,14 @@ const Home = () => {
 
       <main className="home-main">
         <div className="buttons-container">
-          <button onClick={handleButtonClick} className="action-button">
+          <Link to="/teamschannel" className="action-button">
             <span className="button-icon">👥</span>
             <span>Teams Channel</span>
-          </button>
-          <button onClick={handleButtonClick} className="action-button">
+          </Link>
+          <Link to="/ecobankform" className="action-button">
             <span className="button-icon">⚠️</span>
             <span>PANIC</span>
-          </button>
+          </Link>
         </div>
       </main>
     </div>
