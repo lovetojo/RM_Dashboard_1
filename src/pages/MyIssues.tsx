@@ -2,7 +2,7 @@
 
 import { FilePlus } from "lucide-react"
 import EcobankLogo from "../assets/Frame.svg"
-import "./home.css"
+import "./Home.css"
 
 interface Issue {
   id: string
